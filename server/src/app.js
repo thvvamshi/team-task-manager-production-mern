@@ -25,23 +25,15 @@ export function createApp() {
   const app = express();
 
   app.use(helmet({ contentSecurityPolicy: false, crossOriginResourcePolicy: false }));
-  app.use(
-    cors({
-      origin(origin, callback) {
-        if (!origin || env.corsOrigins.includes(origin)) {
-          return callback(null, true);
-        }
-
-        return callback(new Error('Not allowed by CORS'));
-      },
-      credentials: true
-    })
-  );
+ 
+  app.use(cors({ origin: true, credentials: true }));
+  
   app.use(compression());
   app.use(express.json({ limit: '1mb' }));
   app.use(cookieParser());
   app.use(mongoSanitize());
   app.use(hpp());
+
   app.use(morgan(env.isProduction ? 'combined' : 'dev'));
   // apply rate limiting to all requests
   app.use('/api/auth', rateLimit({ windowMs: 15 * 60 * 1000, limit: 40, standardHeaders: true, legacyHeaders: false }));
