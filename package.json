@@ -5,7 +5,7 @@
   "description": "Full-stack team task manager with React, Express, MongoDB",
   "scripts": {
     "dev": "concurrently \"npm run dev --workspace server\" \"npm run dev --workspace client\"",
-    "build": "npm install --prefix client && npm run build --prefix client",
+    "build": "npm run build --workspace client",
     "start": "node server/src/server.js",
     "lint": "npm run lint --workspace client"
   },
