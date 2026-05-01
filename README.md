@@ -39,22 +39,22 @@ A production-ready MERN task management application for teams. Admin users can c
 ```text
 .
 +-- client
-¦   +-- src
-¦   ¦   +-- components
-¦   ¦   +-- context
-¦   ¦   +-- lib
-¦   ¦   +-- pages
-¦   +-- package.json
+ï¿½   +-- src
+ï¿½   ï¿½   +-- components
+ï¿½   ï¿½   +-- context
+ï¿½   ï¿½   +-- lib
+ï¿½   ï¿½   +-- pages
+ï¿½   +-- package.json
 +-- server
-¦   +-- src
-¦   ¦   +-- config
-¦   ¦   +-- controllers
-¦   ¦   +-- middleware
-¦   ¦   +-- models
-¦   ¦   +-- routes
-¦   ¦   +-- utils
-¦   ¦   +-- validators
-¦   +-- package.json
+ï¿½   +-- src
+ï¿½   ï¿½   +-- config
+ï¿½   ï¿½   +-- controllers
+ï¿½   ï¿½   +-- middleware
+ï¿½   ï¿½   +-- models
+ï¿½   ï¿½   +-- routes
+ï¿½   ï¿½   +-- utils
+ï¿½   ï¿½   +-- validators
+ï¿½   +-- package.json
 +-- package.json
 +-- railway.json
 +-- README.md
@@ -718,10 +718,3 @@ npm run lint      # Run frontend lint
 - Set `CLIENT_URL` and `CORS_ORIGINS` to the Railway domain.
 - Confirm the first Admin using `INITIAL_ADMIN_EMAIL`.
 - Open `/api/docs` after deployment and test all protected routes with a Bearer token.
-
-## Submission Checklist
-
-- Live Railway URL
-- GitHub repository URL
-- README with setup, deployment, API docs, and sample outputs
-- 2-5 minute demo video covering login, signup, project creation, member assignment, task assignment, dashboard, and Swagger docs
